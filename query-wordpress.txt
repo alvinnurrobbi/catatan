@@ -1,5 +1,13 @@
+[Localhost/Satu Server]
 CREATE DATABASE wordpress;
 CREATE USER 'userwp'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'userwp'@'localhost';
+FLUSH PRIVILEGES;
+exit
+
+[Remote DB / Database Terpisah]
+CREATE DATABASE wordpress;
+CREATE USER 'userwp'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'userwp'@'%';
 FLUSH PRIVILEGES;
 exit
