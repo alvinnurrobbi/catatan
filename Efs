@@ -1,0 +1,14 @@
+nano /etc/fstab
+IPefs:/ /var/www/html nfs4 defaults,_netdev 0 0
+
+Perintah mencopy wordpress
+cp -rf wordpress/* .
+
+Melihat apakah efs Sudah ke mount (df -h)
+
+chmod 600 privat.pem
+
+telnet ipinstance 3306 melihat apakah database sudah konek
+
+Perintah mengubah password mysql
+Mysql_secure_installlation
